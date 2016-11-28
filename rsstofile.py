@@ -62,7 +62,7 @@ if __name__ == '__main__':
     line_file = config[rss]['LINE_FILE']
     blacklist = ('/usr/local/bin/RssToFile/lists/' + rss + '_blacklist.txt')
     feed = feedparser.parse(feed_url)
-    for item in reversed(feed['items'][:10]):
+    for item in reversed(feed['items'][:100]):
         published_parsed = item['published_parsed']
         publicado = '{}{:02d}{:02d}{:02d}{:02d}{:02d}'.format(
             published_parsed.tm_year,
